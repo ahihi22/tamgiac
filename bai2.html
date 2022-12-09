@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai2</title>
+  </head>
+  <body>
+    <form action="">
+      <p>code boi tu dep trai----------- hay nhap code di</p>
+      <input type="text" id="txt_x" />
+      <input type="text" id="txt_y" />
+      <input type="text" id="txt_z" />
+      <button type="button" onclick="check()">Submit</button>
+      <p id="kq"></p>
+    </form>
+
+    <script>
+      function check() {
+        var a = parseFloat(document.getElementById("txt_x").value);
+        var b = parseFloat(document.getElementById("txt_y").value);
+        var c = parseFloat(document.getElementById("txt_z").value);
+        if (a > 0 && b > 0 && c > 0) {
+          if (a + b > c && b + c > a && a + c > b) {
+            document.getElementById("kq").innerHTML = "la 1 tam giac";
+          } else {
+            document.getElementById("kq").innerHTML = "ko la 1 tam giac";
+          }
+        } else {
+          document.getElementById("kq").innerHTML = "ko la 1 tam giac";
+        }
+        console.log(a + b);
+      }
+    </script>
+  </body>
+</html>
